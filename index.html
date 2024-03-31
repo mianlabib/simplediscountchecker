@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Check - Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h3 {
+            font-size: 24px;
+            color: #696969;
+        }
+        p{
+            font-size: 12px;
+            color: #696969;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border: 1px solid rgb(248, 205, 10);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #31a104;
+            border: 1px solid #31a104;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+            color: white;
+            transition: 0.3s all ease-in-out;
+        }
+        #result{
+            border: 2px dashed #31a104;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+        <div>
+            <p>Check you discount % status!</p>
+            <h3 id="result"></h3>
+            <input type="text" name="" id="amnt" placeholder="Enter Shopping Amount">
+            <button onclick="check()">Check Discount</button>
+            <p>Discount only available on 5000 or above Shopping.</p>
+        </div>    
+
+    <script>
+        function check(){
+                var amount = parseInt(document.getElementById("amnt").value);
+                if(amount  >= 5000 && amount < 10000){
+                    document.getElementById("result").innerHTML = "You Got 5% Discount"
+                }
+                else if(amount  >= 10000 && amount < 20000){
+                    document.getElementById("result").innerHTML = "You Got 10% Discount"
+                }
+                else if(amount  >= 20000){
+                    document.getElementById("result").innerHTML = "You Got 20% Discount"
+                }
+                else{
+                    document.getElementById("result").innerHTML = "You not eligible for Discount"
+                }
+            }
+    </script>
+</body>
+</html>
