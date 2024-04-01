@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discount Check - Shopping Cart</title>
+    <title>Simple Discount Check - Shopping Cart</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,7 +59,7 @@
 <body>
 
         <div>
-            <p>Check you discount % status!</p>
+            <p>Check your discount % status!</p>
             <h3 id="result"></h3>
             <input type="text" name="" id="amnt" placeholder="Enter Shopping Amount">
             <button onclick="check()">Check Discount</button>
@@ -79,7 +79,7 @@
                     document.getElementById("result").innerHTML = "You Got 20% Discount"
                 }
                 else{
-                    document.getElementById("result").innerHTML = "You not eligible for Discount"
+                    document.getElementById("result").innerHTML = "No eligible for Discount!"
                 }
             }
     </script>
